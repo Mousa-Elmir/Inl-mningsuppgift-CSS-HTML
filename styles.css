@@ -1,0 +1,700 @@
+/* Källor där jag har hittat hjälp: Youtube,Traversy media, kevin powell och the net ninja, Reddit WebDev kanalen, Udemy, Codecademy, w3schools, Mozilla developer network, Hans, och Joakim  */
+
+
+/* Nollställa  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 50px;
+    background-color: white;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.picture {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.features {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.dark-mode {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+
+#darkModeSwitch {
+    display: none;
+}
+
+.switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    margin-left: 10px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.switch:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+#darkModeSwitch:checked + .switch {
+    background-color: #4A90E2;
+}
+
+#darkModeSwitch:checked + .switch:before {
+    transform: translateX(20px);
+}
+
+.sign-in {
+    background-color: #4A90E2;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+/* Main */
+
+main {
+    background: linear-gradient(365deg, #6366f11a 0%, #da46ef0d 42%, #f1f4fd12 83%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    margin: 0 auto;
+}
+
+.body-text {
+    max-width: 50%;
+    margin-right: 40px;
+    padding-left: 200px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.app-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.appstore, .googleplay {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.app-store-button img,
+.google-play-button img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.app-store-button:hover img,
+.google-play-button:hover img {
+    transform: scale(1.05);
+}
+
+.app-store-button:focus,
+.google-play-button:focus {
+    outline: none;
+}
+
+.phones {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-left: 20px;
+    padding-right: 200px;
+}
+
+
+.discover-more {
+    margin-top: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 370px; 
+    left: -730px;
+}
+
+.discover-more a {
+    display: flex; 
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.discover-icon {
+    height: 20px; 
+    margin-right: 5px; 
+}  
+
+/* --------------------------------------------------------------------------- */
+                      /* Andra Sidan */
+.second-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto 40px auto;
+}
+
+.logos img {
+    max-width: 220px; 
+    height: auto;
+    margin: 0 30px; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.logos img:hover {
+    transform: scale(1.1); /* Liten zoom-effekt vid hover */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.features-content {
+    flex: 2;
+    max-width: 600px;
+    margin-left: 150px;
+    text-align: left;
+}
+
+.features-content h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.features-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+    max-width: 280px; 
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+                           /* Tredje sidan */
+
+.third-section {
+    background-color: #f3f6ff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.third-section h2 {
+    font-size: 33px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.phones-ex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 40px;
+}
+
+.section-footer {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 0 auto;
+}
+
+.section-des {
+    color: #666;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+                           /* Fjärde sidan */
+
+ .fourth-section {
+    background-color: #fff;
+    padding: 60px 20px;
+ }
+ 
+ .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+ }
+
+.transfer-section,
+.payment-section {
+    max-width: 45%; 
+}
+
+h2 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 600; 
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px; 
+}
+
+
+ul li:before {
+    content: '✔'; 
+    color: #4A90E2;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.picture-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.image-button img {
+    height: 40px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-button:hover img {
+    transform: scale(1.05); 
+}
+
+.image-section {
+    max-width: 50%; 
+}
+
+.graph-image,
+.contacts-image {
+    width: 90%;
+    height: auto;
+    border-radius: 20px; 
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.plus-item {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.benefit-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px; 
+}
+
+.benefit-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Femte sektionen */
+
+
+.fifth-section {
+    background-color: #f3f6ff; 
+    padding: 60px 20px; 
+    text-align: center;
+}
+
+.review-header {
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+
+.fifth-section h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold; 
+}
+
+.reviews-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.review {
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    max-width: 300px; 
+    text-align: left;
+    position: relative; 
+}
+
+.quote-icon img {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: -20px;
+    left: 0px; 
+}
+
+.stars {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 20px;
+    color: #ccc; 
+}
+
+.star.filled {
+    color: gold; 
+}
+
+.review-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.reviewer-title {
+    font-size: 14px;
+    color: #999;
+}
+
+
+/* ------------ Sida 6-------------------- */
+
+
+.sixth-section {
+    background-color: #fff; 
+    padding: 60px 20px;
+}
+
+
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.faq-left {
+    max-width: 45%;
+}
+
+.faq-left h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold; 
+}
+
+.faq-left p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+.contact-options {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-option {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 180px;
+}
+
+.contact-option img {
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-option p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-option a {
+    color: #4A90E2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-option .green {
+    color: rgb(20, 192, 20);
+}
+
+.contact-option a span {
+    margin-left: 5px; 
+}
+
+.faq-right {
+    max-width: 50%;
+}
+
+.faq-question {
+    margin-bottom: 20px;
+}
+
+.faq-question button {
+    width: 100%;
+    background-color: white; 
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question button span {
+    font-size: 18px;
+}
+
+.faq-question.expanded p {
+    padding: 10px 20px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 0 0 10px 10px;
+}
+
+.newsletter-section {
+    background-color: #f3f6ff; /* Ljusblå bakgrundsfärg */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.newsletter-content-wrapper {
+    background-color: #f3f6ff;
+    max-width: 1100px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 10px;
+    box-sizing: border-box;
+}
+
+.newsletter-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.bell-icon {
+    height: 48px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.newsletter-form button {
+    background-color: #4A90E2;
+    columns: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.footer-section {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    color: rgb(147, 151, 173);
+    font-size: 14px;
+    width: 100%; 
+    box-sizing: border-box;
+ }
+
+
+ @media (max-width: 1024px) {
+    .text-content {
+        max-width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .phone-images {
+        margin-right: 0;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .discover-more {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
